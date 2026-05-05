@@ -1,10 +1,10 @@
 # LLM-to-ROS2 Robot Control Agent (Turtlesim + Gazebo Demo)
 
-This project is a **minimal, interview-ready** example of connecting a language-model "planner" to a ROS2 robot **safely** via **tool-calling**.
+This project is a **minimal, inspectable** example of connecting a language-model "planner" to a ROS2 robot **safely** via **tool-calling**.
 It runs out-of-the-box with **turtlesim** and now includes a **Gazebo differential-drive robot** so the same tool API can drive a more realistic simulator.
 The architecture is structured so the backend can later map to real robot stacks (Nav2 / MoveIt2) with only tool-implementation changes.
 
-## Why this is interview-ready
+## Why this project matters
 - **Tool-calling architecture** (LLM plans -> validated tool call -> deterministic execution).
 - **Safety layer**: allowlist tools + schema validation + bounds/speed limits + retries/timeouts.
 - **Observations**: pose/state feedback; loop supports re-planning.
@@ -86,7 +86,7 @@ ros2 run llm_ros_agent agent_node --ros-args \
 
 ---
 
-## Architecture (what you present in interview)
+## Architecture
 
 **Planner (LLM or mock)** proposes a JSON tool call:
 ```json
@@ -115,7 +115,7 @@ Backends:
 
 ---
 
-## Extending to real robots (what you say)
+## Extending to real robots
 - Replace `tools_turtlesim.py` with tools that call:
   - **Nav2**: `NavigateToPose` action
   - **MoveIt2**: motion planning services/actions
@@ -138,7 +138,7 @@ Backends:
 
 ---
 
-## What to demo in 3 minutes
+## Suggested walkthrough
 1) Start turtlesim
 2) Start agent
 3) Publish: "Go to x=8 y=2 then draw a square of size 2"
@@ -150,21 +150,21 @@ Backends:
 ## License
 MIT (for interview/portfolio use)
 
-## Result screenshots
+## Example output
 
 ![llm_to_ros result screenshot](docs/results/result-screenshot.png)
 
 Mock-planner command flow showing natural-language goal parsing, safety checks, and ROS publication.
 
 
-## What this demonstrates
+## Implementation notes
 
 - A safe tool-calling boundary between an LLM planner and ROS 2 robot commands.
 - Mock planning mode for deterministic demos without external API access.
 - Turtlesim and Gazebo launch paths sharing the same action interface.
 
 
-## Limitations and next steps
+## Validation and next steps
 
 - The mock planner is intentionally simple and does not represent full language understanding.
 - Real robot use would require stronger safety validation outside the LLM process.
