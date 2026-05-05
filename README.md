@@ -150,21 +150,21 @@ Backends:
 ## License
 MIT (for interview/portfolio use)
 
-## Example output
+## Command trace
 
 ![llm_to_ros result screenshot](docs/results/result-screenshot.png)
 
 Mock-planner command flow showing natural-language goal parsing, safety checks, and ROS publication.
 
 
-## Implementation notes
+## Control pipeline notes
 
 - A safe tool-calling boundary between an LLM planner and ROS 2 robot commands.
 - Mock planning mode for deterministic demos without external API access.
 - Turtlesim and Gazebo launch paths sharing the same action interface.
 
 
-## Validation and next steps
+## Integration limits
 
 - The mock planner is intentionally simple and does not represent full language understanding.
 - Real robot use would require stronger safety validation outside the LLM process.
