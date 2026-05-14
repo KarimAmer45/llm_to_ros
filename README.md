@@ -4,6 +4,12 @@ This project is a **minimal, inspectable** example of connecting a language-mode
 It runs out-of-the-box with **turtlesim** and now includes a **Gazebo differential-drive robot** so the same tool API can drive a more realistic simulator.
 The architecture is structured so the backend can later map to real robot stacks (Nav2 / MoveIt2) with only tool-implementation changes.
 
+## Demo Preview
+
+![LLM-to-ROS2 command pipeline preview](docs/demo.gif)
+
+Preview animation of the project flow: natural-language goal parsing, tool-call validation, safety checks, ROS2 command execution, and pose feedback.
+
 ## Why this project matters
 - **Tool-calling architecture** (LLM plans -> validated tool call -> deterministic execution).
 - **Safety layer**: allowlist tools + schema validation + bounds/speed limits + retries/timeouts.
