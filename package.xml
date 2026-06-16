@@ -3,7 +3,7 @@
   <name>llm_ros_agent</name>
   <version>0.1.0</version>
   <description>Interview-ready LLM-to-ROS2 tool-calling agent demo for turtlesim and Gazebo.</description>
-  <maintainer email="you@example.com">Karim Amer</maintainer>
+  <maintainer email="karimamer456@gmail.com">Karim Amer</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>

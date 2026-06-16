@@ -21,7 +21,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Karim Amer',
-    maintainer_email='you@example.com',
+    maintainer_email='karimamer456@gmail.com',
     description='Interview-ready LLM-to-ROS2 tool-calling agent demo for turtlesim and Gazebo.',
     license='MIT',
     tests_require=['pytest'],
