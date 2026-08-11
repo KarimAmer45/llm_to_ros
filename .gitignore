@@ -18,3 +18,4 @@ Thumbs.db
 
 # Runtime logs
 *.jsonl
+.claude/
